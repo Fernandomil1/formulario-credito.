@@ -1,107 +1,132 @@
 
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Formulario de Crédito</title>
-<style>
-        body { font-family: Arial, sans-serif; padding: 20px; background-color: #f4f4f4; }
-        form { background-color: #fff; padding: 20px; border-radius: 8px; max-width: 600px; margin: auto; }
-        input, select, textarea { width: 100%; padding: 10px; margin: 10px 0; border-radius: 4px; border: 1px solid #ccc; }
-        label { font-weight: bold; }
-        .captcha { display: flex; align-items: center; }
-        .captcha img { margin-right: 10px; }
-        button { background-color: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
-        button:hover { background-color: #218838; }
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Formulario de Crédito</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eef2f5;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 25px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        label {
+            display: block;
+            margin-top: 20px;
+            font-weight: bold;
+            color: #34495e;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 30px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .captcha {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .captcha img {
+            margin-right: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+        }
     </style>
-<style>
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f6f8;
-    margin: 0;
-    padding: 20px;
-}
-form {
-    max-width: 600px;
-    margin: auto;
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-}
-h2 {
-    text-align: center;
-    color: #333;
-}
-label {
-    display: block;
-    margin-top: 15px;
-    font-weight: bold;
-    color: #555;
-}
-input, select, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-input[type="submit"] {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    margin-top: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-input[type="submit"]:hover {
-    background-color: #0056b3;
-}
-</style></head>
+</head>
 <body>
-<h2>Formulario de Solicitud de Crédito</h2>
-<form>
-<label for="nombre">Nombre completo:</label>
-<input id="nombre" name="nombre" required="" type="text"/>
-<label for="cedula">Cédula:</label>
-<input id="cedula" name="cedula" required="" type="text"/>
-<label for="correo">Correo electrónico:</label>
-<input id="correo" name="correo" required="" type="email"/>
-<label for="telefono">Teléfono:</label>
-<input id="telefono" name="telefono" required="" type="tel"/>
-<label for="provincia">Provincia:</label>
-<input id="provincia" name="provincia" type="text"/>
-<label for="direccion">Dirección:</label>
-<textarea id="direccion" name="direccion"></textarea>
-<label for="profesion">Profesión:</label>
-<input id="profesion" name="profesion" type="text"/>
-<label for="tiempo_trabajo">Años y/o meses de trabajo:</label>
-<input id="tiempo_trabajo" name="tiempo_trabajo" type="text"/>
-<label for="dependencia">Relación de dependencia:</label>
-<select id="dependencia" name="dependencia">
-<option value="dependiente">Dependiente</option>
-<option value="independiente">Independiente</option>
-<option value="jubilado">Jubilado</option>
-<option value="estudiante">Estudiante</option>
-</select>
-<label for="foto_frontal">Foto de cédula (frontal):</label>
-<input accept="image/*" id="foto_frontal" name="foto_frontal" type="file"/>
-<label for="foto_posterior">Foto de cédula (posterior):</label>
-<input accept="image/*" id="foto_posterior" name="foto_posterior" type="file"/>
-<label for="observaciones">Observaciones:</label>
-<textarea id="observaciones" name="observaciones"></textarea>
-<label for="vendedor">Nombre del vendedor:</label>
-<input id="vendedor" name="vendedor" type="text"/>
-<label for="captcha">CAPTCHA (simulado):</label>
-<div class="captcha">
-<img alt="captcha" src="https://dummyimage.com/100x40/cccccc/000000&amp;text=AB12"/>
-<input id="captcha" name="captcha" placeholder="Ingrese el texto de la imagen" type="text"/>
-</div>
-<button type="submit">Enviar solicitud</button>
-</form>
+    <div class="container">
+        <h2>Formulario de Solicitud de Crédito</h2>
+        <form action="https://formsubmit.co/fernandosala51@gmail.com" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="_captcha" value="true">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_autoresponse" value="Gracias por enviar tu solicitud. Te contactaremos pronto.">
+            <input type="hidden" name="_honey" style="display:none">
+
+            <label for="nombre">Nombre completo:</label>
+            <input id="nombre" name="nombre" required type="text"/>
+
+            <label for="cedula">Cédula:</label>
+            <input id="cedula" name="cedula" required type="text"/>
+
+            <label for="correo">Correo electrónico:</label>
+            <input id="correo" name="correo" required type="email"/>
+
+            <label for="telefono">Teléfono:</label>
+            <input id="telefono" name="telefono" required type="tel"/>
+
+            <label for="provincia">Provincia:</label>
+            <input id="provincia" name="provincia" type="text"/>
+
+            <label for="direccion">Dirección:</label>
+            <textarea id="direccion" name="direccion"></textarea>
+
+            <label for="profesion">Profesión:</label>
+            <input id="profesion" name="profesion" type="text"/>
+
+            <label for="tiempo_trabajo">Años y/o meses de trabajo:</label>
+            <input id="tiempo_trabajo" name="tiempo_trabajo" type="text"/>
+
+            <label for="dependencia">Relación de dependencia:</label>
+            <select id="dependencia" name="dependencia">
+                <option value="dependiente">Dependiente</option>
+                <option value="independiente">Independiente</option>
+                <option value="jubilado">Jubilado</option>
+                <option value="estudiante">Estudiante</option>
+            </select>
+
+            <label for="foto_frontal">Foto de cédula (frontal):</label>
+            <input accept="image/*" id="foto_frontal" name="foto_frontal" type="file"/>
+
+            <label for="foto_posterior">Foto de cédula (posterior):</label>
+            <input accept="image/*" id="foto_posterior" name="foto_posterior" type="file"/>
+
+            <label for="observaciones">Observaciones:</label>
+            <textarea id="observaciones" name="observaciones"></textarea>
+
+            <label for="vendedor">Nombre del vendedor:</label>
+            <input id="vendedor" name="vendedor" type="text"/>
+
+            <button type="submit">Enviar solicitud</button>
+        </form>
+    </div>
 </body>
 </html>
 
