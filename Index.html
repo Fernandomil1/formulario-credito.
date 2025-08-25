@@ -1,11 +1,12 @@
 
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Crédito</title>
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Formulario de Crédito</title>
+<style>
         body { font-family: Arial, sans-serif; padding: 20px; background-color: #f4f4f4; }
         form { background-color: #fff; padding: 20px; border-radius: 8px; max-width: 600px; margin: auto; }
         input, select, textarea { width: 100%; padding: 10px; margin: 10px 0; border-radius: 4px; border: 1px solid #ccc; }
@@ -15,61 +16,92 @@
         button { background-color: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
         button:hover { background-color: #218838; }
     </style>
-</head>
+<style>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 20px;
+}
+form {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+h2 {
+    text-align: center;
+    color: #333;
+}
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #555;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+</style></head>
 <body>
-    <h2>Formulario de Solicitud de Crédito</h2>
-    <form>
-        <label for="nombre">Nombre completo:</label>
-        <input type="text" id="nombre" name="nombre" required>
-
-        <label for="cedula">Cédula:</label>
-        <input type="text" id="cedula" name="cedula" required>
-
-        <label for="correo">Correo electrónico:</label>
-        <input type="email" id="correo" name="correo" required>
-
-        <label for="telefono">Teléfono:</label>
-        <input type="tel" id="telefono" name="telefono" required>
-
-        <label for="provincia">Provincia:</label>
-        <input type="text" id="provincia" name="provincia">
-
-        <label for="direccion">Dirección:</label>
-        <textarea id="direccion" name="direccion"></textarea>
-
-        <label for="profesion">Profesión:</label>
-        <input type="text" id="profesion" name="profesion">
-
-        <label for="tiempo_trabajo">Años y/o meses de trabajo:</label>
-        <input type="text" id="tiempo_trabajo" name="tiempo_trabajo">
-
-        <label for="dependencia">Relación de dependencia:</label>
-        <select id="dependencia" name="dependencia">
-            <option value="dependiente">Dependiente</option>
-            <option value="independiente">Independiente</option>
-            <option value="jubilado">Jubilado</option>
-            <option value="estudiante">Estudiante</option>
-        </select>
-
-        <label for="foto_frontal">Foto de cédula (frontal):</label>
-        <input type="file" id="foto_frontal" name="foto_frontal" accept="image/*">
-
-        <label for="foto_posterior">Foto de cédula (posterior):</label>
-        <input type="file" id="foto_posterior" name="foto_posterior" accept="image/*">
-
-        <label for="observaciones">Observaciones:</label>
-        <textarea id="observaciones" name="observaciones"></textarea>
-
-        <label for="vendedor">Nombre del vendedor:</label>
-        <input type="text" id="vendedor" name="vendedor">
-
-        <label for="captcha">CAPTCHA (simulado):</label>
-        <div class="captcha">
-            <img src="https://dummyimage.com/100x40/cccccc/000000&text=AB12" alt="captcha">
-            <input type="text" id="captcha" name="captcha" placeholder="Ingrese el texto de la imagen">
-        </div>
-
-        <button type="submit">Enviar solicitud</button>
-    </form>
+<h2>Formulario de Solicitud de Crédito</h2>
+<form>
+<label for="nombre">Nombre completo:</label>
+<input id="nombre" name="nombre" required="" type="text"/>
+<label for="cedula">Cédula:</label>
+<input id="cedula" name="cedula" required="" type="text"/>
+<label for="correo">Correo electrónico:</label>
+<input id="correo" name="correo" required="" type="email"/>
+<label for="telefono">Teléfono:</label>
+<input id="telefono" name="telefono" required="" type="tel"/>
+<label for="provincia">Provincia:</label>
+<input id="provincia" name="provincia" type="text"/>
+<label for="direccion">Dirección:</label>
+<textarea id="direccion" name="direccion"></textarea>
+<label for="profesion">Profesión:</label>
+<input id="profesion" name="profesion" type="text"/>
+<label for="tiempo_trabajo">Años y/o meses de trabajo:</label>
+<input id="tiempo_trabajo" name="tiempo_trabajo" type="text"/>
+<label for="dependencia">Relación de dependencia:</label>
+<select id="dependencia" name="dependencia">
+<option value="dependiente">Dependiente</option>
+<option value="independiente">Independiente</option>
+<option value="jubilado">Jubilado</option>
+<option value="estudiante">Estudiante</option>
+</select>
+<label for="foto_frontal">Foto de cédula (frontal):</label>
+<input accept="image/*" id="foto_frontal" name="foto_frontal" type="file"/>
+<label for="foto_posterior">Foto de cédula (posterior):</label>
+<input accept="image/*" id="foto_posterior" name="foto_posterior" type="file"/>
+<label for="observaciones">Observaciones:</label>
+<textarea id="observaciones" name="observaciones"></textarea>
+<label for="vendedor">Nombre del vendedor:</label>
+<input id="vendedor" name="vendedor" type="text"/>
+<label for="captcha">CAPTCHA (simulado):</label>
+<div class="captcha">
+<img alt="captcha" src="https://dummyimage.com/100x40/cccccc/000000&amp;text=AB12"/>
+<input id="captcha" name="captcha" placeholder="Ingrese el texto de la imagen" type="text"/>
+</div>
+<button type="submit">Enviar solicitud</button>
+</form>
 </body>
 </html>
+
