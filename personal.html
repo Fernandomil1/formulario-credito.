@@ -80,14 +80,8 @@
             <input type="hidden" name="_autoresponse" value="Gracias por enviar tu solicitud. Te contactaremos pronto.">
             <input type="hidden" name="_honey" style="display:none">
 
-            <label for="razon_social">Razon Social:</label>
-            <input id="razon_social="razon_social" required type="text"/>
-
-            <label for="ruc">Ruc:</label>
-            <input id="ruc="ruc" required type="text"/>
-
-            <label for="correo">Correo:</label>
-            <input id="correo="correo" required type="text"/>
+            <label for="nombre">Nombre completo:</label>
+            <input id="nombre" name="nombre" required type="text"/>
 
             <label for="cedula">Cédula:</label>
             <input id="cedula" name="cedula" required type="text"/>
@@ -104,11 +98,19 @@
             <label for="direccion">Dirección:</label>
             <textarea id="direccion" name="direccion"></textarea>
 
-            <label for="hectareaje">Hectareaje:</label>
-            <input id="hectareaje" name="hectareaje" type="text"/>
+            <label for="profesion">Profesión:</label>
+            <input id="profesion" name="profesion" type="text"/>
 
-            <label for="anos_en_el_mercado">Años en el mercdo:</label>
-            <input id="anos_en_el_mercado" name="anos_en_el_mercado" type="text"/>
+            <label for="tiempo_trabajo">Años y/o meses de trabajo:</label>
+            <input id="tiempo_trabajo" name="tiempo_trabajo" type="text"/>
+
+            <label for="dependencia">Relación de dependencia:</label>
+            <select id="dependencia" name="dependencia">
+                <option value="dependiente">Dependiente</option>
+                <option value="independiente">Independiente</option>
+                <option value="jubilado">Jubilado</option>
+                <option value="estudiante">Estudiante</option>
+            </select>
 
             <label for="foto_frontal">Foto de cédula (frontal):</label>
             <input accept="image/*" id="foto_frontal" name="foto_frontal" type="file"/>
