@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Formulario de Crédito</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eef2f5;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 25px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        label {
+            display: block;
+            margin-top: 20px;
+            font-weight: bold;
+            color: #34495e;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 30px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .captcha {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .captcha img {
+            margin-right: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Formulario de Solicitud de Crédito</h2>
+        <form action="https://formsubmit.co/fernandosala51@gmail.com" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="_captcha" value="true">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_autoresponse" value="Gracias por enviar tu solicitud. Te contactaremos pronto.">
+            <input type="hidden" name="_honey" style="display:none">
+
+            <label for="razon_social">Razon Social:</label>
+            <input id="razon_social="razon_social" required type="text"/>
+
+            <label for="ruc">Ruc:</label>
+            <input id="ruc="ruc" required type="text"/>
+
+            <label for="correo">Correo:</label>
+            <input id="correo="correo" required type="text"/>
+
+            <label for="cedula">Cédula:</label>
+            <input id="cedula" name="cedula" required type="text"/>
+
+            <label for="correo">Correo electrónico:</label>
+            <input id="correo" name="correo" required type="email"/>
+
+            <label for="telefono">Teléfono:</label>
+            <input id="telefono" name="telefono" required type="tel"/>
+
+            <label for="provincia">Provincia:</label>
+            <input id="provincia" name="provincia" type="text"/>
+
+            <label for="direccion">Dirección:</label>
+            <textarea id="direccion" name="direccion"></textarea>
+
+            <label for="hectareaje">Hectareaje:</label>
+            <input id="hectareaje" name="hectareaje" type="text"/>
+
+            <label for="anos_en_el_mercado">Años en el mercdo:</label>
+            <input id="anos_en_el_mercado" name="anos_en_el_mercado" type="text"/>
+
+            <label for="foto_frontal">Foto de cédula (frontal):</label>
+            <input accept="image/*" id="foto_frontal" name="foto_frontal" type="file"/>
+
+            <label for="foto_posterior">Foto de cédula (posterior):</label>
+            <input accept="image/*" id="foto_posterior" name="foto_posterior" type="file"/>
+
+            <label for="observaciones">Observaciones:</label>
+            <textarea id="observaciones" name="observaciones"></textarea>
+
+            <label for="vendedor">Nombre del vendedor:</label>
+            <input id="vendedor" name="vendedor" type="text"/>
+
+            <button type="submit">Enviar solicitud</button>
+        </form>
+    </div>
+</body>
+</html>
